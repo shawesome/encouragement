@@ -1,7 +1,7 @@
 {
-  "name": "YOUR-PROJECT-NAME-HERE",
-  "description": "YOUR PROJECT DESCRIPTION HERE",
-  "author": "YOUR NAME <your@emailaddress.com>",
+  "name": "beeboard-animation",
+  "description": "The meanbeers as you've never seen them before!",
+  "author": "Martin Shaw <martin.shaw@meanbee.com>",
   "version": "0.0.1",
   "dependencies": {
     "connect": "1.8.5",
