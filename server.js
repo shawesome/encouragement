@@ -23,14 +23,12 @@ server.error(function(err, req, res, next){
                   title : '404 - Not Found'
                  ,description: ''
                  ,author: ''
-                 ,analyticssiteid: 'XXXXXXX' 
                 },status: 404 });
     } else {
         res.render('500.jade', { locals: { 
                   title : 'The Server Encountered an Error'
                  ,description: ''
                  ,author: ''
-                 ,analyticssiteid: 'XXXXXXX'
                  ,error: err 
                 },status: 500 });
     }
@@ -60,8 +58,8 @@ io.sockets.on('connection', function(socket){
 server.get('/', function(req,res){
   res.render('index.jade', {
     locals : { 
-              title : 'Beeboard'
-             ,description: 'meanbeez doing teh meanbee thingz'
+              title : 'Encouragement'
+             ,description: 'GAMECEPTION'
              ,author: 'Martin Shaw'
             }
   });

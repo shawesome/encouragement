@@ -1,14 +1,12 @@
 {
-  "name": "beeboard-animation",
-  "description": "The meanbeers as you've never seen them before!",
-  "author": "Martin Shaw <martin.shaw@meanbee.com>",
+  "name": "Encouragement",
+  "description": "The game about making games... GAMECEPTION",
+  "author": "Martin Shaw <mshaw1989@gmail.com>",
   "version": "0.0.1",
   "dependencies": {
     "connect": "1.8.5",
     "express": "2.5.2",
-    "jade": "0.20.0",
     "mongoose": "2.4.8",
-    "socket.io": "0.8.7"
   },
   "devDependencies": {
     "vows": "0.5.x",
