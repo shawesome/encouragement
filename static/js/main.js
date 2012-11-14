@@ -8,9 +8,9 @@
 
 // game resources
 var g_resources = [{
-    name: "meanbee_tileset",
+    name: "bg_tileset",
     type: "image",
-    src: "images/meanbee_tileset.png"
+    src: "images/bg_tileset.png"
 }, {
     name: "map",
     type: "tmx",
@@ -54,7 +54,8 @@ var jsApp = {
 
         me.input.bindKey(me.input.KEY.LEFT,  "left");
         me.input.bindKey(me.input.KEY.RIGHT, "right");
-        me.input.bindKey(me.input.KEY.X,     "jump", true);
+        me.input.bindKey(me.input.KEY.UP, "up");
+        me.input.bindKey(me.input.KEY.DOWN, "down");
 
         // start the game
         me.state.change(me.state.PLAY);

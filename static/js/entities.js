@@ -24,8 +24,15 @@ var PlayerEntity = me.ObjectEntity.extend({
         } else {
             this.vel.x = 0;
         }
-        if (me.input.isKeyPressed('jump')) {
-
+        
+        if (me.input.isKeyPressed('up')) {
+            // update the entity velocity
+            this.vel.y -= this.accel.y * me.timer.tick;
+        } else if (me.input.isKeyPressed('down')) {
+            // update the entity velocity
+            this.vel.y += this.accel.y * me.timer.tick;
+        } else {
+            this.vel.y = 0;
         }
 
         // check & update player movement
