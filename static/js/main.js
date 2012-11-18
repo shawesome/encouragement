@@ -51,16 +51,18 @@ var jsApp = {
         me.state.set(me.state.PLAY, new PlayScreen());
 
         me.entityPool.add("mainPlayer", PlayerEntity);
+        me.entityPool.add("enemySpawner", EnemySpawner);
 
         me.input.bindKey(me.input.KEY.LEFT,  "left");
         me.input.bindKey(me.input.KEY.RIGHT, "right");
         me.input.bindKey(me.input.KEY.UP, "up");
         me.input.bindKey(me.input.KEY.DOWN, "down");
 
+
+
         // start the game
         me.state.change(me.state.PLAY);
     }
-
 }; 
 
 /* the in game stuff*/

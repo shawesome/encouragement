@@ -50,3 +50,25 @@ var PlayerEntity = me.ObjectEntity.extend({
         return false;
     }
 });
+
+
+var EnemySpawner = me.InvisibleEntity.extend({
+    update: function() {
+        console.log('maybe spawn an enemy, maybe not');
+    }
+});
+
+var EnemyEntity = me.ObjectEntity.extend({
+    /* constructor */
+    init: function(x, y, settings) {
+        // call the constructor
+        this.parent(x, y, settings);
+        // set the default horizontal & vertical speed (accel vector)
+        this.setVelocity(3, 3);
+        this.gravity = 0;
+    },
+
+    /* update the player pos */
+    update: function() {
+    }
+});
