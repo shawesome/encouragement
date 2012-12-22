@@ -1,0 +1,69 @@
+﻿Design Document for SBG’s First Project
+
+
+1. Game Overview
+Concept
+A simulation RPG, where each character is linked to another program or game. The player character is a work in progress piece of software which gains stat points as the project is worked on, allowing the character to defeat tougher programs.
+
+
+Game Flow Summary
+1. Open program
+2. Menu screen
+1. “New Program” -> goto Character creation
+2. “Load program” -> goto Gameplay
+1. Character creation
+2. Gameplay -> Character death
+3. Character screen
+1. Add progress -> Level up
+2. “Continue” -> goto Gameplay
+3. “Save and Exit” -> save update progress, exit program
+
+
+Look and Feel
+Art will be pixel sprites. The camera will be an isometric style, similar to the first Legend of Zelda. Animation will be a only a few frames; a couple for movement and an additional couple for combat.
+
+
+Project Scope
+There is only one map: an arena with a number of randomly generated enemy programs. There will effectively be an infinite number of levels; enemy stats will scale with the level number, so more progression will always be available. 
+
+
+2. Gameplay and Mechanics
+
+
+Gameplay
+
+
+Objectives
+To progress your program as far as possible by doing work in its linked project.
+
+
+Character Creation
+Character creation should be done after the design document is written. The important concepts and features should be decided, entered into the character sheet and then linked to character stats (e.g. combat mechanics can be linked to attack and enemy a.i. can be linked to intelligence). 
+
+
+Game Progression
+The player character starts with the lowest stats. The character roams around the game fighting enemy programs. Any programs the player character defeats awards small stat boosts. Once an enemy program reduces its hp to 0, the player is then moved to the character progression screen. 
+
+
+Each entry in the character sheet has an option for: “Progress”, “Milestone” and “Complete”. Clicking one requires a description of the achievement and then adds bonus stats to the character. The amount of stats depends on the level of achievement (Complete > Milestone > Progress) and the time since the last achievement of the same type. 
+
+
+The player then clicks “Continue” and returns the character to the current level and observes their character’s progress until they are defeated again. The player then saves their character’s progress and exits, to complete more work on the project.
+
+
+Mechanics
+
+
+Interaction
+The player character’s actions in the game are automated. All interaction is performed in the character advancement screen which will improve the characters automated actions.
+
+
+Movement
+The intelligence stat affects movement behaviour. At lowest levels, the character will wander randomly. Higher levels open up movement patterns to have a higher chance of finding enemies or a level of survival instinct to avoid enemies who are stronger than the character. 
+
+
+Enemies will have a behaviour which affects their movement, such as aggressive types hunting out the player program.
+
+
+Combat
+Units have an aggro radius and will attack any enemy within that radius. The unit moves into attack range and causes attack damage each attack interval to the enemy’s health, which is reduced by the enemy’s defence. This continues until one of the units’ hp drops to 0, or the units leave each others’ aggro radius.
