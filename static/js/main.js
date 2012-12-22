@@ -19,6 +19,10 @@ var g_resources = [{
     name: "sprite",
     type: "image",
     src: "images/sprite.png"
+}, {
+    name: "enemy",
+    type: "image",
+    src: "images/enemy.png"
 }];
 
 
@@ -52,6 +56,7 @@ var jsApp = {
 
         me.entityPool.add("mainPlayer", PlayerEntity);
         me.entityPool.add("enemySpawner", EnemySpawner);
+        me.entityPool.add("enemyEntity", EnemyEntity);
 
         me.input.bindKey(me.input.KEY.LEFT,  "left");
         me.input.bindKey(me.input.KEY.RIGHT, "right");
