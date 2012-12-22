@@ -70,5 +70,20 @@ var EnemyEntity = me.ObjectEntity.extend({
 
     /* update the player pos */
     update: function() {
+        var goX = Math.random() >= 0.5;
+        var goY = Math.random() >= 0.5;
+
+        if (goX) {
+            this.vel.x += this.accel.x * me.timer.tick;
+        } else {
+            this.vel.x -= this.accel.x * me.timer.tick;
+        }
+        if (goY) {
+            this.vel.y += this.accel.y * me.timer.tick;
+        } else {
+            this.vel.y -= this.accel.y * me.timer.tick;
+        }
+        this.updateMovement();
+        return true;
     }
 });
