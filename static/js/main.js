@@ -63,6 +63,9 @@ var jsApp = {
         me.input.bindKey(me.input.KEY.UP, "up");
         me.input.bindKey(me.input.KEY.DOWN, "down");
 
+        // overrides the entity gravity values ~TS
+        me.sys.gravity = 0;
+
 
 
         // start the game

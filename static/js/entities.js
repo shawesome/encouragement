@@ -7,7 +7,7 @@ var PlayerEntity = me.ObjectEntity.extend({
         // walking animatin
         this.addAnimation ("walk-down", [0,1,2,3]);
         this.addAnimation ("walk-up", [8,9,10,11]);
-        this.addAnimation ("walk-right", [16, 17]);
+        this.addAnimation ("walk-right", [16,17,18,19]);
         // set the default horizontal & vertical speed (accel vector)
         this.setVelocity(3, 3);
         this.gravity = 0;
@@ -71,6 +71,10 @@ var EnemyEntity = me.ObjectEntity.extend({
     init: function(x, y, settings) {
         // call the constructor
         this.parent(x, y, settings);
+        // walking animatin
+        this.addAnimation ("walk-down", [0,1,2,3]);
+        this.addAnimation ("walk-up", [8,9,10,11]);
+        this.addAnimation ("walk-right", [16,17,18,19]);
         // set the default horizontal & vertical speed (accel vector)
         this.setVelocity(3, 3);
         this.gravity = 0;
@@ -83,14 +87,35 @@ var EnemyEntity = me.ObjectEntity.extend({
 
         if (goX) {
             this.vel.x += this.accel.x * me.timer.tick;
+            this.setCurrentAnimation("walk-right");
+            this.flipX(false);
+                //Updating x and then y, rather than both together ~TS
+                if (goY) {
+                this.vel.y += this.accel.y * me.timer.tick;
+                this.setCurrentAnimation("walk-down");
+            } else {
+                this.vel.y -= this.accel.y * me.timer.tick;
+                this.setCurrentAnimation("walk-up");
+            }
         } else {
             this.vel.x -= this.accel.x * me.timer.tick;
+            this.setCurrentAnimation("walk-right");
+            this.flipX(true);
+                if (goY) {
+                this.vel.y += this.accel.y * me.timer.tick;
+                this.setCurrentAnimation("walk-down");
+            } else {
+                this.vel.y -= this.accel.y * me.timer.tick;
+                this.setCurrentAnimation("walk-up");
+            }
         }
-        if (goY) {
+        /*if (goY) {
             this.vel.y += this.accel.y * me.timer.tick;
+            this.setCurrentAnimation("walk-down");
         } else {
             this.vel.y -= this.accel.y * me.timer.tick;
-        }
+            this.setCurrentAnimation("walk-up");
+        }*/
         this.updateMovement();
         return true;
     }
