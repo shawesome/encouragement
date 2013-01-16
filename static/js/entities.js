@@ -6,8 +6,8 @@ var PlayerEntity = me.ObjectEntity.extend({
         this.parent(x, y, settings);
         // walking animatin
         this.addAnimation ("walk-down", [0,1,2,3]);
-        this.addAnimation ("walk-up", [8,9,10,11]);
-        this.addAnimation ("walk-right", [16,17,18,19]);
+        this.addAnimation ("walk-up", [6,7,8,9]);
+        this.addAnimation ("walk-right", [12,13,14,15]);
         // set the default horizontal & vertical speed (accel vector)
         this.setVelocity(3, 3);
         this.gravity = 0;
@@ -73,8 +73,8 @@ var EnemyEntity = me.ObjectEntity.extend({
         this.parent(x, y, settings);
         // walking animatin
         this.addAnimation ("walk-down", [0,1,2,3]);
-        this.addAnimation ("walk-up", [8,9,10,11]);
-        this.addAnimation ("walk-right", [16,17,18,19]);
+        this.addAnimation ("walk-up", [6,7,8,9]);
+        this.addAnimation ("walk-right", [12,13,14,15]);
         // set the default horizontal & vertical speed (accel vector)
         this.setVelocity(3, 3);
         this.gravity = 0;
